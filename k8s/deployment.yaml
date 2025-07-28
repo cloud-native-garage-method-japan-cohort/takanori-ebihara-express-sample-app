@@ -54,6 +54,8 @@ spec:
         imagePullPolicy: IfNotPresent
       imagePullSecrets: 
       - name: ebihara-pull-secret
-      securityContext: {}
+      securityContext:
+        runAsUser: 1000860001
+        runAsGroup: 1000860001
   revisionHistoryLimit: 10
   progressDeadlineSeconds: 600
